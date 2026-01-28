@@ -288,10 +288,6 @@ generate_page() {
   cat > shttr/app/controllers/${page}.sh <<EOF
 TITLE="${page}"
 export TITLE
-
-. \${SHTTR_APP}/models/\${CONTROLLER}
-
-. \${SHTTR_APP}/views/\${CONTROLLER}
 EOF
   touch shttr/app/models/${page}.sh
   if [ -f shttr/app/views/shared/nav.html ]; then
